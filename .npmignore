@@ -41,6 +41,4 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
-build/
-node_modules/
-npm-debug.log
+.gitattributes
