@@ -20,12 +20,12 @@ function cMaster(dxOptions) {
   oThis.dfProcedures = dxOptions.dfProcedures || {};
   var bUDPJSONSenderStarted = false, bTCPJSONRPCServerStarted = false;
   Object.defineProperty(oThis, "bStarted", {"get": function () { return bUDPJSONSenderStarted && bTCPJSONRPCServerStarted; }});
-  oThis._oUDPJSONSender = mUDPJSON.cSender({
+  oThis._oUDPJSONSender = new mUDPJSON.cSender({
     "uIPVersion": oThis._uIPVersion,
     "uPort": oThis._uPort,
     "uMTU": uMTU,
   });
-  oThis._oTCPJSONRPCServer = mTCPJSONRPC.cServer({
+  oThis._oTCPJSONRPCServer = new mTCPJSONRPC.cServer({
     "uIPVersion": oThis._uIPVersion,
     "sHostname": sHostname,
     "uPort": oThis._uPort,

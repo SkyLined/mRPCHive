@@ -19,7 +19,7 @@ function cWorker(dxOptions) {
   var bStarted = false;
   Object.defineProperty(oThis, "bStarted", {"get": function () { return bStarted; }});
   oThis._doConnections = {};
-  oThis._oUDPJSONReceiver = mUDPJSON.cReceiver({
+  oThis._oUDPJSONReceiver = new mUDPJSON.cReceiver({
     "uIPVersion": uIPVersion,
     "sHostname": sHostname,
     "uPort": uPort,
