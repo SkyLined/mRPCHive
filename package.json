@@ -23,8 +23,8 @@
     "url": "git://github.com/SkyLined/mRPCHive"
   },
   "dependencies": {
-    "mtcpjsonrpc": "~0.0.4",
-    "mudpjson": "~0.0.5"
+    "mtcpjsonrpc": "~0.0.6",
+    "mudpjson": "~0.0.7"
   },
   "main": "./index.js",
   "engines": {
