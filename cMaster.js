@@ -1,12 +1,12 @@
+module.exports = cMaster;
+
 var mEvents = require("events"),
     mTCPJSONRPC = require("mTCPJSONRPC"),
     mUDPJSON = require("mUDPJSON"),
     mUtil = require("util");
 
-module.exports = cMaster;
-
 function cMaster(dxOptions) {
-  if (this.constructor != arguments.callee) return new arguments.callee(dfProcedures, dxOptions);
+  if (this.constructor != arguments.callee) throw new Error("This is a constructor, not a function");
   // options: uIPVersion, sHostname, uPort, uBroadcastInterval (ms), uConnectionKeepAlive (ms), dfProcedures
   // emits: error, start, connect, stop
   var oThis = this;

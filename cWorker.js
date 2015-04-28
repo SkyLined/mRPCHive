@@ -6,7 +6,7 @@ var mEvents = require("events"),
     mUtil = require("util");
 
 function cWorker(dxOptions) {
-  if (this.constructor != arguments.callee) return new arguments.callee(dxOptions);
+  if (this.constructor != arguments.callee) throw new Error("This is a constructor, not a function");
   // options: uIPVersion, sHostname, uPort, dfProcedures
   // emits: error, start, connect, stop
   var oThis = this;
